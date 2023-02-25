@@ -4,6 +4,8 @@ The number of implementations for image classifiers is limited only by the imagi
 
 The goal of this project is to demonstrate a data science pipeline for custom image classification problems. In this example, an image classification deep neural network will be built to classify images of tanks and cars from the dataset up. 
 
+![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/Cars%20and%20Tanks%20.png) <br>
+
 # Dataset 
 An image classifier requires labeled images of objects to train and test a model. Robust classification models often train on millions of labeled images. For example, the ImageNet classification dataset has more than 14 million images belonging to 21 thousand different classes (Fei-Fei et al, 2023). 	Sourcing many labeled images can be a challenge for developing an image classification model. Social media is one place where many images can be found, pre labeled with hashtags, titles, or organized into dedicated topic forums. Reddit hosts several forums dedicated to images of specific objects, two examples of this are r/carporn and r/tankporn. These subreddits exclusively contain high quality images of tanks and cars and will be the source of data used in this model. 
 
