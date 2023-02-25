@@ -15,6 +15,8 @@ Scraping notebook: https://github.com/AdamPeetz/CustomImageClassifierTools/blob/
 
 Cleaning notebook: https://github.com/AdamPeetz/CustomImageClassifierTools/blob/main/duplicate_remover.ipynb 
 
+![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/scraping%20and%20cleaning.jpg) <br>
+
 # Data preparation 
 
 Images scraped from the internet come in many different shapes and sizes. Convolutional neural networks (CNNs) need images to be scaled to a specific size before they can be input into the machine learning model. Scaling down images also reduces the amount of storage space they consume. This allows the model to use fewer resources during its training phase. 
@@ -28,8 +30,10 @@ https://github.com/AdamPeetz/CustomImageClassifierTools/blob/main/resizing_image
 The rescaling operation reduces the overall dataset size: 
 
 ## Image Scaling: 
+![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/image%20resizing.jpg) <br>
 
 ## Image Centering: 
+![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/image%20centering.jpg) <br>
 
 The processed dataset used in this project is available on Kaggle: https://www.kaggle.com/datasets/gatewayadam/cars-and-tanks-image-classification. 
 
