@@ -29,6 +29,8 @@ https://github.com/AdamPeetz/CustomImageClassifierTools/blob/main/resizing_image
 
 The rescaling operation reduces the overall dataset size: 
 
+![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/date%20resizing%20effects.jpg) <br>
+
 ## Image Scaling: 
 ![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/image%20resizing.jpg) <br>
 
@@ -44,6 +46,8 @@ There are 1,303 images in the training dataset. This is a small dataset when com
 Augmenting images creates small adjustments to each image. Examples are adjusting the brightness of an image or flipping it horizontally or vertically. The best way to illustrate why this works is with an example. If the network has only seen images of cars taken in bright light it may assume the brightness of an image is a defining feature of a car. Adjusting the brightness of images as part of the augmentation pipeline will expand the dataset and help the model identify images with varying brightness. 
 
 The effects of the augmentation can be seen below. 
+
+![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/augmentation%20example.jpg) <br>
 
 # Model Architectures 
 Three model architectures were tested. A VGG style sequential network, a custom Peetz Net architecture built with the functional API, and an Xception transfer learning model.  
@@ -71,10 +75,14 @@ Dropout randomly inactivates a percentage of the connections in a layer during e
 # Model Performance 
 The Xception learning model was the highest performing model of the set, achieving 98% accuracy on the test dataset. The Xception model weights are saved and exported for use in future prediction of cars and tanks. A summary of all three models’ performance is shown in the table below. Additional performance discussion is available in the notebooks created for each model. 
 
+![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/model%20accuracy.jpg) <br>
+
 # Ad Hoc Predictors 
 The tools used in this pipeline can be brought together to create ad hoc predictions of tanks and cars for any image. First raw images are resized and center cropped to match the input size of the Xception model, which requires a 224x224 input. Then the saved weights of the pretrained model are loaded and used to generate a prediction against the cropped image. Examples of a few ad hoc predictions are shown below.  
 
 Ad Hoc Predictor Notebook: https://github.com/AdamPeetz/CustomImageClassifierTools/blob/main/adhoc_predictor_volvo.ipynb 
+
+![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/ad-hoc%20examples.jpg) <br>
 
 # Conclusion 
 The data science pipeline used in this notebook is designed to give anyone the power to create and solve image classification problems. It includes code to scrap and clean images, notebook examples of how to train CNN models, and culminates in ad hoc prediction code that would allow a trained model to be deployed to make predictions on brand new images. If you found this repo helpful, please take a moment to follow me or give it a star. 
