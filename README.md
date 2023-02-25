@@ -6,7 +6,7 @@ The goal of this project is to demonstrate a data science pipeline for custom im
 
 ![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/Cars%20and%20Tanks%20.png) <br>
 
-# Dataset 
+# Dataset Creation
 An image classifier requires labeled images of objects to train and test a model. Robust classification models often train on millions of labeled images. For example, the ImageNet classification dataset has more than 14 million images belonging to 21 thousand different classes (Fei-Fei et al, 2023). 	Sourcing many labeled images can be a challenge for developing an image classification model. Social media is one place where many images can be found, pre labeled with hashtags, titles, or organized into dedicated topic forums. Reddit hosts several forums dedicated to images of specific objects, two examples of this are r/carporn and r/tankporn. These subreddits exclusively contain high quality images of tanks and cars and will be the source of data used in this model. 
 
 Reddit provides users with access to scrape their website with an API. Using the reddit API to obtain image data ensures that it is collected ethically as it adheres to the website's data access policy. The results of the scraping operation are summarized in the tables below.  
@@ -17,7 +17,7 @@ Cleaning notebook: https://github.com/AdamPeetz/CustomImageClassifierTools/blob/
 
 ![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/scraping%20and%20cleaning.jpg) <br>
 
-# Data preparation 
+# Data Preparation 
 
 Images scraped from the internet come in many different shapes and sizes. Convolutional neural networks (CNNs) need images to be scaled to a specific size before they can be input into the machine learning model. Scaling down images also reduces the amount of storage space they consume. This allows the model to use fewer resources during its training phase. 
  
@@ -69,7 +69,7 @@ Xception Training Notebook: https://github.com/AdamPeetz/CustomImageClassifierTo
 
 Dropout has been added as a regularization technique to combat early convergence in all model designs. 
 
-## Dropout 
+## Dropout Regularization
 Dropout randomly inactivates a percentage of the connections in a layer during each step of training. This prevents the model from over developing any one pathway in the neural network. Dropout effectively creates an ensemble of weak predictors inside the model which helps generalize it for never-before-seen data. Excessive dropout will make the model fail to converge on a solution. When applied in the right dose, it will prevent early convergence in the model. 
 
 # Model Performance 
@@ -77,7 +77,7 @@ The Xception learning model was the highest performing model of the set, achievi
 
 ![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/model%20accuracy.jpg) <br>
 
-# Ad Hoc Predictors 
+# Ad Hoc Predictions
 The tools used in this pipeline can be brought together to create ad hoc predictions of tanks and cars for any image. First raw images are resized and center cropped to match the input size of the Xception model, which requires a 224x224 input. Then the saved weights of the pretrained model are loaded and used to generate a prediction against the cropped image. Examples of a few ad hoc predictions are shown below.  
 
 Ad Hoc Predictor Notebook: https://github.com/AdamPeetz/CustomImageClassifierTools/blob/main/adhoc_predictor_volvo.ipynb 
