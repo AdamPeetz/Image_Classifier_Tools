@@ -34,9 +34,6 @@ The rescaling operation reduces the overall dataset size:
 ## Image Scaling: 
 ![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/image%20resizing.jpg) <br>
 
-## Image Centering: 
-![alt text](https://github.com/AdamPeetz/imagehosting/blob/main/image%20centering.jpg) <br>
-
 The processed dataset used in this project is available on Kaggle: https://www.kaggle.com/datasets/gatewayadam/cars-and-tanks-image-classification. 
 
 # Data Augmentation 
